@@ -9,6 +9,7 @@ import java.util.List;
  * @author lm
  */
 public class EstadoCuenta {
+    private int id;
     private List<Compra> compras;
     private YearMonth mes;
     private Date fechaInicio;
@@ -80,6 +81,14 @@ public class EstadoCuenta {
 
     public void setTotalAbonos(double totalAbonos) {
         this.totalAbonos = totalAbonos;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
 }

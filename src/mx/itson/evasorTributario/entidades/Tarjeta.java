@@ -8,6 +8,7 @@ import java.util.List;
  * @author lm
  */
 public class Tarjeta {
+    private int id;
     private String nombre;
     private Date fechaCorte;
     private Date fechaPago;
@@ -79,6 +80,14 @@ public class Tarjeta {
 
     public void setCompras(List<Compra> compras) {
         this.compras = compras;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     

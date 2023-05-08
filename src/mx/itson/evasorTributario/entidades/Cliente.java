@@ -5,6 +5,7 @@ package mx.itson.evasorTributario.entidades;
  * @author lm
  */
 public class Cliente {
+    private int id;
     private String nombre;
     private String domicilio;
     private String telefono;
@@ -58,6 +59,14 @@ public class Cliente {
 
     public void setTarjeta(Tarjeta tarjeta) {
         this.tarjeta = tarjeta;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     
