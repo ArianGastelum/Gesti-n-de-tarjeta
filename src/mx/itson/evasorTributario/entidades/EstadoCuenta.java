@@ -9,7 +9,7 @@ import java.util.List;
  * @author lm
  */
 public class EstadoCuenta {
-    private int id;
+    private int id; 
     private List<Compra> compras;
     private YearMonth mes;
     private Date fechaInicio;
