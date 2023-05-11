@@ -1,16 +1,31 @@
 package mx.itson.evasorTributario.entidades;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
 /**
  *
  * @author lm
  */
+@Entity
 public class Cliente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
     private String nombre;
     private String domicilio;
     private String telefono;
     private String curp;
     private String rfc;
+    
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name="idTarjeta")
     private Tarjeta tarjeta;
 
     public String getNombre() {
