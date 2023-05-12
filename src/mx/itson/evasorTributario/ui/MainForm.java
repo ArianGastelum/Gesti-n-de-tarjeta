@@ -4,6 +4,8 @@
  */
 package mx.itson.evasorTributario.ui;
 
+import javax.swing.JDialog;
+
 /**
  *
  * @author Arian Gastelum
@@ -128,7 +130,11 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCompraActionPerformed
-        // TODO add your handling code here:
+        // Crear una instancia del JDialog "RegistrarCompra"
+        JDialog registrarCompraDialog = new RegistrarCompra(this, true);
+
+        // Mostrar el JDialog
+        registrarCompraDialog.setVisible(true);
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
     private void btnSolicitarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarTarjetaActionPerformed
