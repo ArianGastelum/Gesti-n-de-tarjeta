@@ -138,11 +138,17 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
     private void btnSolicitarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitarTarjetaActionPerformed
-        // TODO add your handling code here:
+        JDialog solicitarTarjeta = new SolicitarTarjetaForm(this, true);
+
+        // Mostrar el JDialog
+        solicitarTarjeta.setVisible(true);
     }//GEN-LAST:event_btnSolicitarTarjetaActionPerformed
 
     private void btnHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistorialActionPerformed
-        // TODO add your handling code here:
+        JDialog historial = new Historial(this, true);
+
+        // Mostrar el JDialog
+        historial.setVisible(true);
     }//GEN-LAST:event_btnHistorialActionPerformed
 
     /**
