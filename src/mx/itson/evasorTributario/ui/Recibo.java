@@ -16,6 +16,7 @@ public class Recibo extends javax.swing.JDialog {
     public Recibo(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -176,7 +177,7 @@ public class Recibo extends javax.swing.JDialog {
                     .addComponent(jLabel4)
                     .addComponent(lblMovimiento))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(lblConcepto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
