@@ -5,6 +5,8 @@
 package mx.itson.evasorTributario.ui;
 
 import java.awt.Color;
+import java.awt.Window;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -18,6 +20,7 @@ public class RegistrarCompra extends javax.swing.JDialog {
     public RegistrarCompra(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -155,6 +158,11 @@ public class RegistrarCompra extends javax.swing.JDialog {
         btnVolver.setForeground(new java.awt.Color(0, 0, 0));
         btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/itson/evasorTributario/imagenes/volver.png"))); // NOI18N
         btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
@@ -286,6 +294,11 @@ public class RegistrarCompra extends javax.swing.JDialog {
         cbxFecha.setForeground(Color.BLACK);
 
     }//GEN-LAST:event_cbxFechaMouseClicked
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        Window window = SwingUtilities.getWindowAncestor(btnVolver); // Obtener ventana principal
+        window.setVisible(false); // Ocultar ventana actual
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
      * @param args the command line arguments
