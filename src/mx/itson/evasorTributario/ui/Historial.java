@@ -5,7 +5,9 @@
 package mx.itson.evasorTributario.ui;
 
 import java.awt.Color;
+import java.awt.Window;
 import javax.swing.JTable;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
 
@@ -21,6 +23,7 @@ public class Historial extends javax.swing.JDialog {
     public Historial(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
 
     }
 
@@ -118,6 +121,11 @@ public class Historial extends javax.swing.JDialog {
         btnVolver.setForeground(new java.awt.Color(0, 0, 0));
         btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/itson/evasorTributario/imagenes/volver.png"))); // NOI18N
         btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(0, 0, 204));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -169,6 +177,11 @@ public class Historial extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        Window window = SwingUtilities.getWindowAncestor(btnVolver); // Obtener ventana principal
+        window.setVisible(false); // Ocultar ventana actual
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,9 @@
  */
 package mx.itson.evasorTributario.ui;
 
+import java.awt.Window;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Arian Gastelum
@@ -16,6 +19,7 @@ public class SolicitarTarjetaForm extends javax.swing.JDialog {
     public SolicitarTarjetaForm(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -102,6 +106,11 @@ public class SolicitarTarjetaForm extends javax.swing.JDialog {
         btnVolver.setForeground(new java.awt.Color(0, 0, 0));
         btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/itson/evasorTributario/imagenes/volver.png"))); // NOI18N
         btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -184,6 +193,11 @@ public class SolicitarTarjetaForm extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        Window window = SwingUtilities.getWindowAncestor(btnVolver); // Obtener ventana principal
+        window.setVisible(false); // Ocultar ventana actual
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
      * @param args the command line arguments
